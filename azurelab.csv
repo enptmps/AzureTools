@@ -1,0 +1,4 @@
+﻿Name,ResourceGroup,Size,OS,SubnetRange,AddressRange,SubnetName
+dc01,testrg,Standard_D2,2012-R2-Datacenter,172.20.1.0/24,172.20.0.0/16,Test-Subnet
+file01,testrg,Standard_D2,2012-R2-Datacenter,172.20.1.0/24,172.20.0.0/16,Test-Subnet
+web01,testrg,Standard_D1,2012-R2-Datacenter,172.20.1.0/24,172.20.0.0/16,Test-Subnet
