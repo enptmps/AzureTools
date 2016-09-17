@@ -1,5 +1,6 @@
 # VM Disk (DATA)
 # Parameter help description
+function fnDataDiskLoop{
 Param (
 [Parameter()] [String] $rgName,
 [Parameter()] [String] $vm,
@@ -26,5 +27,7 @@ Param (
         
         Write-Verbose "Begining to Create Data Disk: $datadiskname"
     $vm = Get-AzureRmVM -ResourceGroupName $rgName -Name $($vmName.name) 
+   
     Add-AzureRmVMDataDisk -VM $vmName -Name $datadiskname -VhdUri $dataDiskUri -Caching $Caching -DiskSizeinGB $DataDiskSize1  -CreateOption Empty -Lun $lunid
     Update-AzureRmVM -ResourceGroupName $rgName -VM $vmName
+}
