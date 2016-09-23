@@ -1,4 +1,2 @@
-﻿Name,ResourceGroup,Size,OS,SubnetRange,AddressRange,SubnetName
-dc01,testrg,Standard_D2,2012-R2-Datacenter,172.20.1.0/24,172.20.0.0/16,Test-Subnet
-file01,testrg,Standard_D2,2012-R2-Datacenter,172.20.1.0/24,172.20.0.0/16,Test-Subnet
-web01,testrg,Standard_D1,2012-R2-Datacenter,172.20.1.0/24,172.20.0.0/16,Test-Subnet
+Name,Description,DataDiskSize1,Caching,ResourceGroup,NetworkingResGroup,StorageResGroup,StorageAccount,StorageSku,VnetName,location,Size,SubnetRange,AddressRange,SubnetName,PrivateIP,PublicIP,PublisherName,Offer,Version,Skus,sourceContainer,destinationContainer,SourceVHD
+dc01,Azure Domain Controller,50,None,coreRG,netRG,storeRG,storageacctname,Standard_GRS,testvNet,eastus2,Standard_D1_v2,192.168.1.0/24,192.168.0.0/16,testvNetsub0,192.168.1.10,,MicrosoftWindowsServer,WindowsServer,latest,2012-R2-Datacenter,,vhds,
