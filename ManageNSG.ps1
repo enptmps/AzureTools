@@ -2,13 +2,13 @@ function Add-EPAzSimpleNSGRule {
     [CmdletBinding()]
     # Parameter help description
     Param(
-    [Parameter(Mandatory=$True)][String] $NetworkSecurityGroup,
-    [Parameter(Mandatory=$True)][String] $RuleName,
-    [Parameter(Mandatory=$True)][Int32] $Priority,
-    [Parameter(Mandatory=$True)][String] $Protocol,
-    [Parameter(Mandatory=$True)][String] $Port,
-    [Parameter(Mandatory=$False)][Switch] $Testing
-    )
+        [Parameter(Mandatory=$True)][String] $NetworkSecurityGroup,
+        [Parameter(Mandatory=$True)][String] $RuleName,
+        [Parameter(Mandatory=$True)][Int32] $Priority,
+        [Parameter(Mandatory=$True)][String] $Protocol,
+        [Parameter(Mandatory=$True)][String] $Port,
+        [Parameter(Mandatory=$False)][Switch] $Testing
+        )
 
     Process {
         $nsgHold = (Get-AzureRmNetworkSecurityGroup | ?{$_.name -eq $($NetworkSecurityGroup)})
@@ -29,10 +29,10 @@ function Remove-EPAzNSGRule {
     [CmdletBinding()]
     # Parameter help description
     Param(
-    [Parameter(Mandatory=$True)][String] $NetworkSecurityGroup,
-    [Parameter(Mandatory=$True)][String] $RuleName,
-    [Parameter(Mandatory=$False)][Switch] $Testing
-    )
+        [Parameter(Mandatory=$True)][String] $NetworkSecurityGroup,
+        [Parameter(Mandatory=$True)][String] $RuleName,
+        [Parameter(Mandatory=$False)][Switch] $Testing
+        )
     Begin {}
     Process {
         $nsgHold = (Get-AzureRmNetworkSecurityGroup | ?{$_.name -eq $($NetworkSecurityGroup)})
