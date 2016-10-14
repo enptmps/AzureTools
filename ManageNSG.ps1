@@ -15,12 +15,12 @@ function Add-EPAzSimpleNSGRule {
         Add-AzureRmNetworkSecurityRuleConfig -NetworkSecurityGroup $nsgHold -Priority $Priority `
             -Name $RuleName `
             -Protocol $Protocol `
-            -SourcePortRange $Port `
+            -SourcePortRange * `
             -DestinationPortRange $Port `
             -SourceAddressPrefix * `
             -DestinationAddressPrefix * `
             -Direction Inbound `
-            -Access Allow
+            -Access Allow | Out-Null
         Set-AzureRmNetworkSecurityGroup -NetworkSecurityGroup $nsgHold
         }
 }
