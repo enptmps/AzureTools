@@ -1,15 +1,13 @@
 ﻿function CheckVNetAvailability
 {
     Param(
-        [Parameter()]
+        [Parameter(Mandatory=$true)]
+        [ValidateNotNullOrEmpty]
         [ValidateScript({If ($_ -match '^([a-zA-Z0-9-]){2,64}$')
         {
             $True
-
         } Else {
-
-            Throw "$_ is not a valid Azure VirtualNetwork Name (2-64 Alphanumeric and hyphen)"
-        
+            Throw "$_ is not a valid Azure VirtualNetwork Name (2-64 Alphanumeric and hyphen)"  
         }})]
         $vNetName
     )
@@ -19,11 +17,7 @@
     If ((!$Hold))
     {
         Return $True
-    }
-
-    Else
-    {
+    } Else {
         Return $False
     }
-
 }
