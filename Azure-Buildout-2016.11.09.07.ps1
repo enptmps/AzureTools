@@ -37,7 +37,7 @@ param (
     [parameter(Mandatory=$False)] [switch] $TestMode
 
 )
-Start-Transcript -Path "MetLife-ComedyShow-Transaction.log" -Append
+Start-Transcript -Path "AzureBuildout-Transaction.log" -Append
 
 $StartTime = Get-Date
 
