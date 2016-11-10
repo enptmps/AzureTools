@@ -33,7 +33,7 @@ param (
     [parameter(Mandatory=$False)] [string] $AccountID = "",
     [parameter(Mandatory=$False)] [string] $TenantId = "",
     [parameter(Mandatory=$False)] [string] $SubscriptionId = "",
-    [parameter(Mandatory=$False)] [string] $InputFile = "gomet2.csv",
+    [parameter(Mandatory=$False)] [string] $InputFile = "Azure-Buildout.csv",
     [parameter(Mandatory=$False)] [switch] $TestMode
 
 )
@@ -98,8 +98,8 @@ function Copy-SourceVHD {
     $SourceStorageKey = (Get-AzureRmStorageAccountKey -ResourceGroupName $SrcRG -Name $SourceSA)[0].Value
     $DestStorageKey   = (Get-AzureRmStorageAccountKey -ResourceGroupName $DestRG -Name $DestSA)[0].Value
 
-    $SourceStorageContext = New-AzureStorageContext –StorageAccountName $SourceStorageAccount -StorageAccountKey $SourceStorageKey
-    $DestStorageContext   = New-AzureStorageContext –StorageAccountName $DestSA -StorageAccountKey $DestStorageKey
+    $SourceStorageContext = New-AzureStorageContext â€“StorageAccountName $SourceStorageAccount -StorageAccountKey $SourceStorageKey
+    $DestStorageContext   = New-AzureStorageContext â€“StorageAccountName $DestSA -StorageAccountKey $DestStorageKey
 
     $Blobs = (Get-AzureStorageBlob -Context $SourceStorageContext -Container $SourceContainer | ?{$_.Name -eq $SourceBlob})
     $BlobCpyAry = @()
