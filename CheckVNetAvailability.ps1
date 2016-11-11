@@ -1,4 +1,6 @@
-﻿function CheckVNetAvailability
+﻿#Requires -Module AzureRM.Network
+
+function CheckVNetAvailability
 {
     Param(
         [Parameter(Mandatory=$true)]
