@@ -1,4 +1,7 @@
-﻿Name,ResourceGroup,Size,OS,SubnetRange,AddressRange,SubnetName
-dc01,testrg,Standard_D2,2012-R2-Datacenter,172.20.1.0/24,172.20.0.0/16,Test-Subnet
-file01,testrg,Standard_D2,2012-R2-Datacenter,172.20.1.0/24,172.20.0.0/16,Test-Subnet
-web01,testrg,Standard_D1,2012-R2-Datacenter,172.20.1.0/24,172.20.0.0/16,Test-Subnet
+﻿Name,ResourceGroup,Size,OS,SubnetRange,AddressRange,SubnetName,Location,VNet,StorageAcct,SKU
+dc01,rg001,Standard_A3,2012-R2-Datacenter,10.0.0.0/24,10.0.0.0/16,dssubnet1,eastus,vnetds1,dsstacct1,Standard_LRS
+dc02,rg001,Standard_A3,2012-R2-DataCenter,10.0.0.0/24,10.0.0.0/16,dssubnet1,eastus,vnetds1,dsstacct1,Standard_LRS
+;web01,rg001,Standard_D2,2012-R2-Datacenter,10.0.0.0/24,10.0.0.0/16,dssubnet1,eastus,vnetds1,dsstacct1,Standard_LRS
+cm01,rg001,Standard_D2,2012-R2-Datacenter,10.0.0.0/24,10.0.0.0/16,dssubnet1,eastus,vnetds1,dsstacct1,Standard_LRS
+fs01,rg001,Standard_A1,2012-R2-Datacenter,10.0.0.0/24,10.0.0.0/16,dssubnet1,eastus,vnetds1,dsstacct1,Standard_LRS
+fs02,rg001,Standard_A1,2012-R2-Datacenter,10.0.0.0/24,10.0.0.0/16,dssubnet1,eastus,vnetds1,dsstacct1,Standard_LRS
